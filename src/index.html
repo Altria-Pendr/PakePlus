@@ -1,32 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PakePlus App</title>
-        <script type="module" src="/main.js" defer></script>
-    </head>
+<!doctype html>
+<html>
 
-    <body>
-        <main class="container">
-            <h1>Welcome to PakePlus</h1>
-            <form class="row" id="greet-form">
-                <input id="inputValue" placeholder="Enter a something..." />
-            </form>
-            <div class="resultBox">
-                <span>result: </span>
-                <span id="result"></span>
-            </div>
-            <div class="invokeBox">
-                <button id="openUrl">open_url_browser</button>
-                <button id="openUrlNew">open_url_new</button>
-                <button id="runCommand">run_command</button>
-                <button id="downloadFile">download_file</button>
-                <button id="getExeDir">get_exe_dir</button>
-                <button id="getEnvVar">get_env_var</button>
-                <button id="findPort">find_port</button>
-            </div>
-        </main>
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wildmix</title>
+  <script type="module" crossorigin src="/assets/index-BuWtbWgA.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CtYL6b-1.css">
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            width: 80px;
+            mix-blend-mode: darken;
+            aspect-ratio: 1;
+            border: 15px solid var(--color-background);
+            box-sizing: border-box;
+            background:
+                radial-gradient(farthest-side, var(--color-text) 98%, #0000) 50%/20px 20px,
+                radial-gradient(farthest-side, var(--color-text) 98%, #0000) 50%/20px 20px,
+                radial-gradient(farthest-side, var(--color-text) 98%, #0000) 50%/20px 20px,
+                radial-gradient(farthest-side, var(--color-text) 98%, #0000) 50%/20px 20px,
+                radial-gradient(farthest-side, var(--color-text) 98%, #0000) 50%/20px 20px,
+                linear-gradient(var(--color-text) 0 0) 50%/100% 10px,
+                linear-gradient(var(--color-text) 0 0) 50%/10px 100%,
+                var(--color-background);
+            background-repeat: no-repeat;
+            filter: blur(4px) contrast(10);
+            animation:
+                l13 0.8s infinite,
+                rotate 1.6s infinite;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .loader {
+                mix-blend-mode: lighten;
+            }
+        }
+
+        @keyframes l13 {
+            100% {
+                background-position: 50% -20px, -20px 50%, 50px 50%, 50% 50px, 50%, 50%, 50%;
+            }
+        }
+
+        @keyframes rotate {
+            50% {
+                transform: rotate(-45deg);
+            }
+
+            100% {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+    <div class="loader"></div>
+</body>
+
 </html>
